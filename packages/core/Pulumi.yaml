@@ -1,0 +1,3 @@
+name: roth-monorepo-aws
+runtime: nodejs
+description: Monorepo AWS TypeScript Pulumi deployment

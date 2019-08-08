@@ -1,0 +1,47 @@
+//
+// Card
+//
+
+
+.card-translucent {
+    background-color: rgba(18, 91, 152, 0.08);
+}
+
+@keyframes scaleout {
+    0% { 
+      -webkit-transform: scale(0) ;
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0.2;
+    }
+  }
+
+.card.loading::before {
+  content: '';
+  display: block;
+  background-color: rgba($white, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.card.loading::after {
+    animation: scaleout 1.0s infinite ease-in-out;
+    content: '';
+    display: block;
+    background-color: $primary;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 200;
+}
+

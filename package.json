@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  },
+  "scripts": {
+    "start-api": "cd packages/api && ./docker.sh && yarn start",
+    "start-frontend": "cd packages/frontend && yarn start",
+    "build-frontend": "cd packages/frontend && yarn build",
+    "migrate-api": "cd packages/api && yarn migrate",
+    "deploy": "yarn build-frontend && cd packages/core && yarn build && node bin/cli.js deploy",
+    "destroy": "cd packages/core && node bin/cli.js destroy"
+  }
+}

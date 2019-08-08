@@ -1,0 +1,5 @@
+config:
+  aws:region: us-west-2
+  cloud-aws:useFargate: "true"
+  cloud:provider: aws
+  pulumi:template: aws-typescript
